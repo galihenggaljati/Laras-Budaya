@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Produk — Laras Budaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="page-loader"><div class="spinner"></div></div>
+<div id="navbar-slot"></div>
+
+<main>
+  <div class="container page-hero">
+    <div class="breadcrumb" id="breadcrumb"></div>
+  </div>
+
+  <div class="container section" style="padding-top:16px;" id="detail-root"></div>
+
+  <div class="container section" id="similar-section">
+    <div class="section-head"><div><div class="eyebrow">Rekomendasi</div><h2 class="section-title">Produk Serupa</h2></div></div>
+    <div class="product-grid" id="grid-similar"></div>
+  </div>
+
+  <div class="container section" id="recent-section" style="display:none;">
+    <div class="section-head"><div><div class="eyebrow">Riwayat</div><h2 class="section-title">Produk Baru Dilihat</h2></div></div>
+    <div class="product-grid" id="grid-recent"></div>
+  </div>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/seed-data.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/detail.js"></script>
+</body>
+</html>

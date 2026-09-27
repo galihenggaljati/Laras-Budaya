@@ -1,0 +1,74 @@
+/* =========================================================
+   LARAS BUDAYA — Design Tokens & Theme Variables
+   Palette: cream / white / gold / olive / light brown
+   ========================================================= */
+
+:root {
+  /* --- Color: warm marketplace, batik-derived --- */
+  --clr-cream:        #FDFBF7;
+  --clr-cream-soft:   #F8F5EE;
+  --clr-white:        #FFFFFF;
+  --clr-gold:         #D4A346;
+  --clr-gold-dark:    #B0832B;
+  --clr-gold-soft:    #F2D48F;
+  --clr-olive:        #657546;
+  --clr-olive-dark:   #445229;
+  --clr-brown:        #855635;
+  --clr-brown-light:  #C28E5C;
+  --clr-ink:          #2E2319;
+  --clr-ink-soft:     #5E5144;
+  --clr-line:         #E8DFD1;
+  --clr-danger:       #B3452D;
+  --clr-success:      #4F7A4A;
+
+  --clr-bg: var(--clr-cream-soft);
+  --clr-surface: var(--clr-white);
+  --clr-text: var(--clr-ink);
+  --clr-text-soft: var(--clr-ink-soft);
+  --clr-border: var(--clr-line);
+  --clr-accent: var(--clr-gold);
+  --clr-accent-dark: var(--clr-gold-dark);
+
+  /* --- Type --- */
+  --font-body: 'Poppins', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+
+  /* --- Radius / shadow / motion --- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 4px 15px rgba(46, 35, 25, 0.05);
+  --shadow-mid: 0 10px 35px rgba(46, 35, 25, 0.1);
+  --shadow-lift: 0 20px 50px rgba(46, 35, 25, 0.15), 0 8px 20px rgba(46, 35, 25, 0.08);
+  --shadow-glow: 0 8px 25px rgba(212, 163, 70, 0.35);
+
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --dur-fast: .18s;
+  --dur: .32s;
+  --dur-slow: .55s;
+
+  --nav-h: 72px;
+}
+
+[data-theme="dark"] {
+  --clr-bg: #211A12;
+  --clr-surface: #2C2318;
+  --clr-text: #F3E9D6;
+  --clr-text-soft: #C7B79E;
+  --clr-border: #47392A;
+  --clr-cream-soft: #211A12;
+  --clr-cream: #32281D;
+  --shadow-soft: 0 6px 20px rgba(0,0,0,0.35);
+  --shadow-mid: 0 10px 30px rgba(0,0,0,0.4);
+  --shadow-lift: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: var(--clr-surface) !important;
+  color: var(--clr-text) !important;
+  border-color: var(--clr-border) !important;
+}

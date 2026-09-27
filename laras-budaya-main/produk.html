@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produk — Laras Budaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body data-active="Produk">
+
+<div id="page-loader"><div class="spinner"></div></div>
+<div id="navbar-slot"></div>
+
+<main>
+  <div class="container page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Produk</span></div>
+  </div>
+
+  <div class="container section" style="padding-top:20px;">
+    <!-- Filter Drawer -->
+    <div class="filter-drawer" id="filter-drawer">
+      <div class="filter-drawer-backdrop" id="filter-drawer-backdrop"></div>
+      <div class="filter-drawer-content">
+        <div class="filter-drawer-header">
+          <h3>Filter</h3>
+          <button class="btn-close-drawer" id="btn-close-drawer" style="display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; background:var(--clr-cream-soft); color:var(--clr-text-soft); transition:background var(--dur-fast);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="filter-drawer-body">
+          <aside class="filter-panel" id="filter-panel">
+            <div class="filter-group" id="kategori-filter" style="scroll-margin-top:calc(var(--nav-h) + 20px);">
+              <h5>Kategori</h5>
+              <div id="f-kategori"></div>
+            </div>
+            <div class="filter-group">
+              <h5>Harga</h5>
+              <label class="filter-option"><input type="radio" name="harga" value="all" checked> Semua Harga</label>
+              <label class="filter-option"><input type="radio" name="harga" value="0-150000"> Di bawah Rp150rb</label>
+              <label class="filter-option"><input type="radio" name="harga" value="150000-300000"> Rp150rb – Rp300rb</label>
+              <label class="filter-option"><input type="radio" name="harga" value="300000-999999999"> Di atas Rp300rb</label>
+            </div>
+            <div class="filter-group">
+              <h5>Rating Minimal</h5>
+              <label class="filter-option"><input type="radio" name="rating" value="0" checked> Semua Rating</label>
+              <label class="filter-option"><input type="radio" name="rating" value="4.5"> ★ 4.5 ke atas</label>
+              <label class="filter-option"><input type="radio" name="rating" value="4"> ★ 4.0 ke atas</label>
+            </div>
+            <div class="filter-group">
+              <h5>Warna</h5>
+              <div class="swatch-row" id="f-warna"></div>
+            </div>
+            <div class="filter-group">
+              <h5>Ukuran</h5>
+              <div id="f-ukuran" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+            </div>
+            <div class="filter-group">
+              <label class="filter-option"><input type="checkbox" id="f-stok"> Hanya tampilkan yang tersedia</label>
+            </div>
+          </aside>
+        </div>
+        <div class="filter-drawer-footer">
+          <button class="btn btn-outline btn-sm btn-block" id="reset-filter">Reset</button>
+          <button class="btn btn-primary btn-sm btn-block" id="btn-apply-filter">Terapkan</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="market-layout">
+      <div>
+        <div class="toolbar">
+          <div class="toolbar-left" id="result-count">Memuat produk...</div>
+          <div class="toolbar-right">
+            <button class="btn btn-outline btn-sm" id="btn-open-filter" style="display:flex; align-items:center; gap:6px; font-weight:600;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+              Filter
+            </button>
+            <select class="sort-select" id="sort-select">
+              <option value="terbaru">Terbaru</option>
+              <option value="terlaris">Terlaris</option>
+              <option value="rating">Rating Tertinggi</option>
+              <option value="termurah">Harga Terendah</option>
+              <option value="termahal">Harga Tertinggi</option>
+              <option value="az">Nama A-Z</option>
+            </select>
+            <div class="view-toggle">
+              <button id="view-grid" class="active" title="Grid">▦</button>
+              <button id="view-list" title="List">☰</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="pagination-wrap" id="pagination-wrap"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/seed-data.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/produk.js"></script>
+</body>
+</html>

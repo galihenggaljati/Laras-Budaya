@@ -1,0 +1,144 @@
+/* =========================================================
+   LARAS BUDAYA — Base Reset, Typography & Shared Utilities
+   ========================================================= */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+input, select, textarea { font-family: inherit; color: inherit; }
+ul { list-style: none; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
+@media (max-width: 576px) {
+  .container { padding: 0 14px; }
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--clr-brown-light); border-radius: 99px; }
+
+:focus-visible { outline: 2px solid var(--clr-gold-dark); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Parang weave signature — thin diagonal repeat, batik-derived */
+.parang-texture {
+  background-image: repeating-linear-gradient(45deg, rgba(139,94,60,0.10) 0 2px, transparent 2px 26px),
+                    repeating-linear-gradient(-45deg, rgba(200,155,60,0.08) 0 2px, transparent 2px 26px);
+}
+
+.eyebrow {
+  font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--clr-gold-dark); font-weight: 600;
+}
+[data-theme="dark"] .eyebrow { color: var(--clr-gold-soft); }
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(24px, 3.4vw, 42px);
+  line-height: 1.15;
+  color: var(--clr-text);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 26px; border-radius: var(--radius-pill);
+  font-weight: 600; font-size: 14.5px; cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease), background var(--dur-fast);
+  white-space: nowrap;
+}
+.btn:active { transform: scale(.97); }
+.btn-primary { background: linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-brown) 130%); color: #fff; box-shadow: var(--shadow-soft); }
+.btn-primary:hover { box-shadow: var(--shadow-glow), var(--shadow-mid); transform: translateY(-3px); }
+.btn-outline { border: 1.5px solid var(--clr-olive); color: var(--clr-olive-dark); background: transparent; }
+[data-theme="dark"] .btn-outline { color: var(--clr-gold-soft); border-color: var(--clr-gold-soft); }
+.btn-outline:hover { background: var(--clr-olive); color: #fff; box-shadow: 0 8px 20px rgba(101, 117, 70, 0.25); }
+.btn-ghost { color: var(--clr-text-soft); }
+.btn-ghost:hover { color: var(--clr-text); }
+.btn-danger { background: var(--clr-danger); color: #fff; }
+.btn-sm { padding: 8px 16px; font-size: 13px; border-radius: var(--radius-pill); }
+.btn-block { width: 100%; }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none !important; }
+
+@media (max-width: 576px) {
+  .btn { padding: 10px 18px; font-size: 13.5px; }
+  .btn-sm { padding: 6px 12px; font-size: 12px; }
+  .btn-block-mobile { width: 100%; }
+}
+
+/* ---------- Card surface ---------- */
+.card-surface {
+  background: var(--clr-surface); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft); border: 1px solid var(--clr-border);
+}
+@media (max-width: 576px) {
+  .card-surface { border-radius: var(--radius-md); }
+}
+
+/* ---------- Skeleton Loading ---------- */
+.skeleton {
+  background: linear-gradient(90deg, var(--clr-line) 25%, #f0e8d6 37%, var(--clr-line) 63%);
+  background-size: 400% 100%; animation: skeleton-loading 1.4s ease infinite; border-radius: var(--radius-md);
+}
+[data-theme="dark"] .skeleton { background: linear-gradient(90deg, #3a2f22 25%, #46392a 37%, #3a2f22 63%); background-size: 400% 100%; }
+@keyframes skeleton-loading { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+/* ---------- Spinner ---------- */
+.spinner {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 3px solid var(--clr-line); border-top-color: var(--clr-gold-dark);
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Empty State ---------- */
+.empty-state { text-align: center; padding: 64px 20px; color: var(--clr-text-soft); grid-column: 1 / -1; width: 100%; }
+.empty-state svg { margin: 0 auto 18px; opacity: .7; }
+.empty-state h3 { font-family: var(--font-display); font-size: 24px; color: var(--clr-text); margin-bottom: 6px; }
+
+@media (max-width: 576px) {
+  .empty-state { padding: 36px 14px; }
+  .empty-state svg { margin-bottom: 12px; }
+  .empty-state h3 { font-size: 20px; }
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 700; letter-spacing: .02em;
+  padding: 4px 10px; border-radius: var(--radius-pill); color: #fff;
+}
+.badge-best { background: var(--clr-brown); }
+.badge-promo { background: var(--clr-danger); }
+.badge-new { background: var(--clr-olive); }
+.badge-top { background: var(--clr-gold-dark); }
+
+/* ---------- Glassmorphism & Animations ---------- */
+.glass {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+[data-theme="dark"] .glass { background: rgba(44,35,24,0.55); border-color: rgba(255,255,255,0.08); }
+
+.fade-up { animation: fadeUp .6s var(--ease) both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+.stars { color: var(--clr-gold-dark); letter-spacing: 1px; font-size: 13px; }

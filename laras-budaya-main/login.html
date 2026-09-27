@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masuk — Laras Budaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="admin-login-wrap parang-texture">
+  <div class="admin-login-box" style="max-width:440px;">
+    <div style="text-align:center; margin-bottom:22px;">
+      <div class="mark" style="width:46px; height:46px; margin:0 auto 10px; font-size:17px;">LB</div>
+      <h1 style="font-family:var(--font-display); font-size:26px;">Selamat Datang Kembali</h1>
+      <p style="font-size:12.5px; color:var(--clr-text-soft);">Masuk untuk melanjutkan ke Laras Budaya</p>
+    </div>
+
+    <div class="tabs" style="justify-content:center; margin-bottom:18px;" id="auth-tabs">
+      <button class="tab-btn active" data-sub="login">Masuk</button>
+      <button class="tab-btn" data-sub="register">Daftar Akun</button>
+    </div>
+
+    <!-- SUB LOGIN (UNIFIED CUSTOMER & ADMIN) -->
+    <div id="sub-login">
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" placeholder="email@contoh.com" required>
+          <div class="error-msg"></div>
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" placeholder="Password" required>
+          <div class="error-msg"></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Masuk</button>
+      </form>
+    </div>
+
+    <!-- SUB REGISTER -->
+    <div id="sub-register" style="display:none;">
+      <form id="register-form" novalidate>
+        <div class="field">
+          <label for="reg-nama">Nama Lengkap</label>
+          <input type="text" id="reg-nama" name="nama" placeholder="Nama Lengkap" required>
+          <div class="error-msg"></div>
+        </div>
+        <div class="field">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" name="email" placeholder="email@contoh.com" required>
+          <div class="error-msg"></div>
+        </div>
+        <div class="field">
+          <label for="reg-whatsapp">Nomor WhatsApp</label>
+          <input type="text" id="reg-whatsapp" name="whatsapp" placeholder="081234567890" required>
+          <div class="error-msg"></div>
+        </div>
+        <div class="field">
+          <label for="reg-alamat">Alamat</label>
+          <textarea id="reg-alamat" name="alamat" rows="2" placeholder="Alamat lengkap pengiriman" required></textarea>
+          <div class="error-msg"></div>
+        </div>
+        <div class="field">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" name="password" placeholder="Minimal 6 karakter" required>
+          <div class="error-msg"></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Daftar & Masuk</button>
+      </form>
+    </div>
+
+    <p style="text-align:center; margin-top:18px;"><a href="index.html" style="font-size:12.5px; color:var(--clr-brown);">← Kembali ke Website</a></p>
+  </div>
+</div>
+<script src="js/icons.js"></script>
+<script src="js/seed-data.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/login.js"></script>
+</body>
+</html>

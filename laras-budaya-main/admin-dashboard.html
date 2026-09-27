@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Laras Budaya Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="admin-shell">
+  <div id="admin-shell-slot"></div>
+  <div class="admin-main">
+    <div id="topbar"></div>
+    <div class="stat-grid" id="stat-grid"></div>
+    <div class="admin-dashboard-split">
+      <div class="admin-panel">
+        <h3>Grafik Penjualan (7 Hari Terakhir)</h3>
+        <div class="chart-bars" id="sales-chart"></div>
+      </div>
+      <div class="admin-panel">
+        <h3>Produk Terlaris</h3>
+        <div id="top-products"></div>
+      </div>
+    </div>
+    <div class="admin-panel">
+      <h3>Activity Log</h3>
+      <div id="activity-log"></div>
+    </div>
+  </div>
+</div>
+<script src="js/icons.js"></script>
+<script src="js/seed-data.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin-shared.js"></script>
+<script src="js/pages/admin-dashboard.js"></script>
+</body>
+</html>

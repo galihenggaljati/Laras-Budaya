@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelola Pesanan — Laras Budaya Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="admin-shell">
+  <div id="admin-shell-slot"></div>
+  <div class="admin-main">
+    <div id="topbar"></div>
+    <div class="admin-panel">
+      <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+        <input type="text" id="search-order" placeholder="Cari nomor invoice / nama customer..." style="padding:9px 14px; border-radius:99px; border:1.5px solid var(--clr-border); min-width:260px;">
+        <select id="filter-status" style="padding:9px 14px; border-radius:99px; border:1.5px solid var(--clr-border);">
+          <option value="">Semua Status</option>
+        </select>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>Invoice</th><th>Customer</th><th>Tanggal</th><th>Total</th><th>Status</th><th>Aksi</th></tr></thead>
+        <tbody id="order-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal"><div class="modal-box" id="modal-box"></div></div>
+
+<script src="js/icons.js"></script>
+<script src="js/seed-data.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin-shared.js"></script>
+<script src="js/pages/admin-pesanan.js"></script>
+</body>
+</html>

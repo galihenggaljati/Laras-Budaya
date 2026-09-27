@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laras Budaya — Marketplace Busana Tradisional Indonesia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body data-active="Home">
+
+<div id="page-loader"><div class="spinner"></div></div>
+<div id="navbar-slot"></div>
+
+<main>
+  <div class="container page-hero">
+    <section class="hero">
+      <div>
+        <div class="hero-eyebrow">Warisan Budaya Nusantara</div>
+        <h1>Kenakan Cerita Leluhur dalam Setiap Helai Kain</h1>
+        <p>Dari kain lurik tenun tangan Klaten hingga beskap Solo yang dijahit perajin berpengalaman — Laras Budaya menghadirkan busana tradisional Indonesia untuk generasi masa kini.</p>
+        <div class="hero-actions">
+          <a href="produk.html" class="btn btn-primary">Belanja Sekarang</a>
+          <a href="tentang.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.5);">Kenali Kami</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/img/couple.jpg" alt="Busana tradisional Jawa" style="border-radius:20px; box-shadow:0 20px 50px rgba(0,0,0,.35); max-height:380px; object-fit:cover;">
+        <div class="hero-badge-float" style="top:-10px; right:-10px; display:flex; align-items:center; gap:7px;"><span id="badge-icn-1" style="width:16px;height:16px;display:inline-flex;"></span> Tenun Tangan Asli</div>
+        <div class="hero-badge-float" style="bottom:-10px; left:-14px; display:flex; align-items:center; gap:7px;"><span id="badge-icn-2" style="width:16px;height:16px;display:inline-flex;"></span> 4.8/5 dari 300+ pembeli</div>
+      </div>
+    </section>
+  </div>
+
+  <div id="category-sliders"></div>
+
+  <div class="container section parang-texture" style="border-radius:var(--radius-lg); background:var(--clr-cream);">
+    <div class="umkm-grid" id="umkm-section">
+      <img src="https://images.unsplash.com/photo-1622560481156-01780990d035?auto=format&fit=crop&w=560&q=70" style="border-radius:20px; box-shadow:var(--shadow-mid);" alt="Perajin UMKM batik dan tenun">
+      <div>
+        <div class="eyebrow">Tentang Kami</div>
+        <h2 class="section-title" style="margin:10px 0 16px;">Didukung UMKM Perajin Lokal</h2>
+        <p style="color:var(--clr-text-soft); line-height:1.8; margin-bottom:18px;">Setiap produk di Laras Budaya berasal dari perajin dan UMKM busana adat di Surakarta, Yogyakarta, dan Klaten. Kami percaya bahwa membeli busana tradisional bukan sekadar transaksi, melainkan cara nyata melestarikan keterampilan dan cerita generasi sebelumnya.</p>
+        <a href="tentang.html" class="btn btn-primary">Baca Selengkapnya</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section" id="testimoni">
+    <div class="section-head">
+      <div><div class="eyebrow">Kata Mereka</div><h2 class="section-title">Testimoni Pelanggan</h2></div>
+    </div>
+    <div class="product-grid" id="testi-grid"></div>
+  </div>
+</main>
+
+<div id="footer-slot"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/seed-data.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/index.js"></script>
+</body>
+</html>
